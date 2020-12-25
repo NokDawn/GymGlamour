@@ -1,0 +1,25 @@
+.nav {
+	background-color: black;
+
+	&__list {
+		display: flex;
+		padding-bottom: 2rem;
+	}
+
+	&__item {
+		font-size: 1.3rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		// padding: 0 2rem;
+
+		a {
+			padding: 0 1rem;
+			margin: 0 1rem;
+			transition: all .3s;
+
+			&:hover {
+				color: #cca54f;
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+.footer {
+	background-color: #2c3238;
+	padding: 3rem 0 2rem 0;
+	color: white;
+	font-size: 1.2rem;
+
+	&__container {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+
+		& span {
+			font-weight: 700;
+			margin: .5rem 0;
+		}
+
+		& a {
+			margin: .5rem 0;
+		}
+
+		&-3 {
+			text-align: right;
+
+			span {
+				margin-bottom: 1rem;
+			}
+
+			.copyright {
+				margin-top: 3rem;
+				font-weight: 300;
+			}
+		}
+	}
+
+	&__icons {
+		display: flex;
+		justify-content: flex-end;
+
+		.icon {
+			padding: .5rem;
+			background-color: white;
+			color: #2c3238;
+			border-radius: 50%;
+			display: flex;
+		}
+	}
+}

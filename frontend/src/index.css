@@ -14,3 +14,8 @@ body {
 	box-sizing: border-box;
 	font-family: Helvetica, Arial, sans-serif;
 }
+
+.center {
+	max-width: 1200px;
+	margin: 0 auto;
+}

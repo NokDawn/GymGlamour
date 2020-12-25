@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import LogoImage from '../../assets/logo.png';
 
 import './logo.styles.scss';
@@ -5,7 +6,9 @@ import './logo.styles.scss';
 const Logo = () => {
 	return (
 		<div className="logo-container">
-			<img src={LogoImage} alt="logo strony" />
+			<Link to="/">
+				<img src={LogoImage} alt="logo strony" />
+			</Link>
 		</div>
 	);
 };

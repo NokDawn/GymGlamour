@@ -2,8 +2,7 @@ import Logo from '../logo/logo.component';
 import CustomButton from '../custom-button/custom-button.component';
 import CartModal from '../cart-modal/cart-modal.component';
 
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { showCart } from '../../redux/cart/cart.actions';
 
 import { FaShoppingBasket, FaSearch } from 'react-icons/fa';
@@ -12,10 +11,6 @@ import './header.styles.scss';
 
 const Header = () => {
 	const dispatch = useDispatch();
-	const [ move, setMove ] = useState(-320);
-
-	const cart = useSelector((state) => state.cart);
-	const { cartHidden } = cart;
 
 	const cartHandler = () => {
 		dispatch(showCart());
@@ -36,11 +31,7 @@ const Header = () => {
 					</div>
 				</div>
 			</div>
-			{cartHidden ? (
-				<CartModal style={{ right: `${move}px` }} />
-			) : (
-				<CartModal style={{ right: `${move + 320}px` }} />
-			)}
+			<CartModal />
 		</header>
 	);
 };

@@ -1,10 +1,15 @@
+import { useSelector } from 'react-redux';
+
 import CustomButton from '../custom-button/custom-button.component';
 
 import './cart-modal.styles.scss';
 
 const CartModal = () => {
+	const cart = useSelector((state) => state.cart);
+	const { cartHidden } = cart;
+
 	return (
-		<div className="cart-modal">
+		<div className="cart-modal" style={{ transform: `translateX(${cartHidden ? '320px' : '0'})` }}>
 			<div className="cart-modal__container">
 				<div className="cart-modal__top">
 					<span className="cart-modal__top-title">Koszyk</span>

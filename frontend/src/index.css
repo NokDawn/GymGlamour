@@ -36,3 +36,8 @@ a {
 .heading-tertiary {
 	font-size: 3rem;
 }
+
+.paragraph {
+	font-weight: 300;
+	line-height: 1.8;
+}

@@ -3,9 +3,12 @@ import { Link } from 'react-router-dom';
 import './product-home.styles.scss';
 
 const ProductHome = ({ imageUrl, name, price, id, category }) => {
+	const scrollToTop = () => {
+		window.scrollTo(0, 0);
+	};
 	return (
 		<div className="product-home">
-			<Link to={`${category}/${id}`}>
+			<Link to={`${category}/${id}`} onClick={scrollToTop}>
 				<div className="image-container">
 					<img src={imageUrl} alt="zdjecie modelki" />
 				</div>

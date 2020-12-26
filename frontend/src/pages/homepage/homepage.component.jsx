@@ -1,5 +1,7 @@
 import Slider from '../../components/slider/slider.component';
-import ProductDirectory from '../../components/product-directory/product-directory.component';
+import ProductHome from '../../components/product-home/product-home.component';
+
+import products from '../../products';
 
 import './homepage.styles.scss';
 
@@ -8,7 +10,11 @@ const HomePage = () => {
 		<div className="homepage">
 			<Slider />
 			<h2 className="heading-tertiary">Nowości i bestsellery</h2>
-			<ProductDirectory />
+			<div className="homepage__products center">
+				{products.map(({ id, ...otherProductProps }) => (
+					<ProductHome key={id} id={id} {...otherProductProps} />
+				))}
+			</div>
 		</div>
 	);
 };

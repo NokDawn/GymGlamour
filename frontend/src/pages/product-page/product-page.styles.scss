@@ -1,6 +1,7 @@
 .product-page {
 	margin-top: 2rem;
 	color: black;
+	margin-bottom: 4rem;
 
 	&__container {
 		display: flex;
@@ -75,6 +76,52 @@
 		&-icon {
 			font-size: 2.5rem;
 			margin-right: 1rem;
+		}
+	}
+
+	&__info {
+		font-size: 1.6rem;
+
+		&-top {
+			margin-bottom: 2rem;
+			padding-bottom: 1rem;
+			border-bottom: 2px solid rgb(238, 230, 230);
+
+			span {
+				margin: 0 1rem;
+				padding: 0 1rem;
+				padding-bottom: 1rem;
+
+				&:hover {
+					cursor: pointer;
+					// border-bottom: 2px solid grey;
+				}
+			}
+
+			:first-of-type {
+				margin-left: 0;
+			}
+		}
+		&-bottom {
+			.paragraph {
+				width: 90%;
+			}
+		}
+	}
+
+	&__collection {
+		text-align: center;
+		margin-top: 5rem;
+
+		.heading-tertiary {
+			margin-bottom: 2rem;
+		}
+
+		&-products {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+			// grid-row-gap: 4rem;
+			margin-bottom: 5rem;
 		}
 	}
 }

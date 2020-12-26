@@ -17,7 +17,9 @@
   "scripts": {
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "delete": "node backend/import -delete",
+    "import": "node backend/import -import"
   },
   "repository": {
     "type": "git",

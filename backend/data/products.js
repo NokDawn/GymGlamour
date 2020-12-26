@@ -10,7 +10,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	},
 	{
 		id: 2,
@@ -23,7 +24,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	},
 	{
 		id: 3,
@@ -36,7 +38,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	},
 	{
 		id: 4,
@@ -49,7 +52,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	},
 	{
 		id: 5,
@@ -62,7 +66,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	},
 	{
 		id: 6,
@@ -75,7 +80,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	},
 	{
 		id: 7,
@@ -88,7 +94,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	},
 	{
 		id: 8,
@@ -101,7 +108,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	},
 	{
 		id: 9,
@@ -114,7 +122,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	},
 	{
 		id: 10,
@@ -127,7 +136,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	},
 	{
 		id: 11,
@@ -140,7 +150,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	},
 	{
 		id: 12,
@@ -153,7 +164,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	},
 	{
 		id: 13,
@@ -166,7 +178,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	},
 	{
 		id: 14,
@@ -179,7 +192,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	},
 	{
 		id: 15,
@@ -192,7 +206,8 @@ const products = [
 			'/images/product1c.jpg'
 		],
 		category: '/kategoria/nowosci',
-		sizes: [ 'XS', 'S', 'M', 'L' ]
+		sizes: [ 'XS', 'S', 'M', 'L' ],
+		countInStock: 10
 	}
 ];
 

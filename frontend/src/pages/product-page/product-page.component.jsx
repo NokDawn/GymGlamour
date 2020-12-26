@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { Link } from 'react-router-dom';
 import { FaBoxOpen } from 'react-icons/fa';
 
@@ -9,22 +11,46 @@ import products from '../../products';
 import './product-page.styles.scss';
 
 const ProductPage = ({ match }) => {
-	const product = products.find((product) => product.id === Number(match.params.id));
+	const [ photoId, setPhotoId ] = useState(0);
 
-	console.log(product);
+	const product = products.find((product) => product.id === Number(match.params.id));
 
 	return (
 		<div className="product-page">
 			<div className="center">
 				<div className="product-page__container">
 					<div className="product-page__col product-page__col-1">
-						<img src={product.imageUrl} alt="male zdjecie modelki" width="54px" height="80px" />
-						<img src={product.imageUrl} alt="male zdjecie modelki" width="54px" height="80px" />
-						<img src={product.imageUrl} alt="male zdjecie modelki" width="54px" height="80px" />
-						<img src={product.imageUrl} alt="male zdjecie modelki" width="54px" height="80px" />
+						<img
+							src={product.imageUrls[0]}
+							alt="male zdjecie modelki"
+							width="54px"
+							height="80px"
+							onClick={() => setPhotoId(0)}
+						/>
+						<img
+							src={product.imageUrls[1]}
+							alt="male zdjecie modelki"
+							width="54px"
+							height="80px"
+							onClick={() => setPhotoId(1)}
+						/>
+						<img
+							src={product.imageUrls[2]}
+							alt="male zdjecie onClick={() => photoHandler(0)}modelki"
+							width="54px"
+							height="80px"
+							onClick={() => setPhotoId(2)}
+						/>
+						<img
+							src={product.imageUrls[3]}
+							alt="male zdjecie modelki"
+							width="54px"
+							height="80px"
+							onClick={() => setPhotoId(3)}
+						/>
 					</div>
 					<div className="image-container product-page__col-2">
-						<img src={product.imageUrl} alt="zdjecie modelki" />
+						<img src={product.imageUrls[photoId]} alt="zdjecie modelki" width="400px" height="550px" />
 					</div>
 					<div className="product-page__col product-page__col-3">
 						<div className="product-page__breadcrumbs">

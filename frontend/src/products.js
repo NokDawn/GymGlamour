@@ -3,7 +3,12 @@ const products = [
 		id: 1,
 		name: 'Leginsy nero',
 		price: 159.99,
-		imageUrl: '/images/product1.jpg',
+		imageUrls: [
+			'/images/product1.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	},
@@ -11,7 +16,12 @@ const products = [
 		id: 2,
 		name: 'Leginsy evergreen',
 		price: 159.99,
-		imageUrl: '/images/product2.jpg',
+		imageUrls: [
+			'/images/product2.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	},
@@ -19,7 +29,12 @@ const products = [
 		id: 3,
 		name: 'Leginsy dark berry',
 		price: 159.99,
-		imageUrl: '/images/product3.jpg',
+		imageUrls: [
+			'/images/product3.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	},
@@ -27,7 +42,12 @@ const products = [
 		id: 4,
 		name: 'Leginsy wild rose',
 		price: 159.99,
-		imageUrl: '/images/product4.jpg',
+		imageUrls: [
+			'/images/product4.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	},
@@ -35,7 +55,12 @@ const products = [
 		id: 5,
 		name: 'Leginsy khaki ombre',
 		price: 149.99,
-		imageUrl: '/images/product5.jpg',
+		imageUrls: [
+			'/images/product5.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	},
@@ -43,7 +68,12 @@ const products = [
 		id: 6,
 		name: 'Leginsy blue ombre',
 		price: 149.99,
-		imageUrl: '/images/product6.jpg',
+		imageUrls: [
+			'/images/product6.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	},
@@ -51,7 +81,12 @@ const products = [
 		id: 7,
 		name: 'Leginsy sea ombre',
 		price: 149.99,
-		imageUrl: '/images/product7.jpg',
+		imageUrls: [
+			'/images/product7.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	},
@@ -59,7 +94,12 @@ const products = [
 		id: 8,
 		name: 'Leginsy silvery',
 		price: 149.99,
-		imageUrl: '/images/product8.jpg',
+		imageUrls: [
+			'/images/product8.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	},
@@ -67,7 +107,12 @@ const products = [
 		id: 9,
 		name: 'Rashguard nero',
 		price: 159.99,
-		imageUrl: '/images/product9.jpg',
+		imageUrls: [
+			'/images/product9.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	},
@@ -75,7 +120,12 @@ const products = [
 		id: 10,
 		name: 'Rashguard evergreen',
 		price: 159.99,
-		imageUrl: '/images/product10.jpg',
+		imageUrls: [
+			'/images/product10.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	},
@@ -83,7 +133,12 @@ const products = [
 		id: 11,
 		name: 'Rashguard dark berry',
 		price: 159.99,
-		imageUrl: '/images/product11.jpg',
+		imageUrls: [
+			'/images/product11.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	},
@@ -91,7 +146,12 @@ const products = [
 		id: 12,
 		name: 'Rashguard wild rose',
 		price: 159.99,
-		imageUrl: '/images/product12.jpg',
+		imageUrls: [
+			'/images/product12.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	},
@@ -99,7 +159,12 @@ const products = [
 		id: 13,
 		name: 'Rashguard khaki ombre',
 		price: 149.99,
-		imageUrl: '/images/product13.jpg',
+		imageUrls: [
+			'/images/product13.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	},
@@ -107,7 +172,12 @@ const products = [
 		id: 14,
 		name: 'Rashguard grey ombre',
 		price: 149.99,
-		imageUrl: '/images/product14.jpg',
+		imageUrls: [
+			'/images/product14.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	},
@@ -115,7 +185,12 @@ const products = [
 		id: 15,
 		name: 'Rashguard blue ombre',
 		price: 149.99,
-		imageUrl: '/images/product15.jpg',
+		imageUrls: [
+			'/images/product15.jpg',
+			'/images/product1a.jpg',
+			'/images/product1b.jpg',
+			'/images/product1c.jpg'
+		],
 		category: '/kategoria/nowosci',
 		sizes: [ 'XS', 'S', 'M', 'L' ]
 	}

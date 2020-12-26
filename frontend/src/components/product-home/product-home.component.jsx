@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import './product-home.styles.scss';
 
-const ProductHome = ({ imageUrl, name, price, id, category }) => {
+const ProductHome = ({ imageUrls, name, price, id, category }) => {
 	const scrollToTop = () => {
 		window.scrollTo(0, 0);
 	};
@@ -10,7 +10,7 @@ const ProductHome = ({ imageUrl, name, price, id, category }) => {
 		<div className="product-home">
 			<Link to={`${category}/${id}`} onClick={scrollToTop}>
 				<div className="image-container">
-					<img src={imageUrl} alt="zdjecie modelki" />
+					<img src={imageUrls[0]} alt="zdjecie modelki" />
 				</div>
 			</Link>
 			<div className="product-home__bottom">

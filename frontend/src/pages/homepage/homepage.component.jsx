@@ -11,9 +11,9 @@ const HomePage = () => {
 			<Slider />
 			<h2 className="heading-tertiary">Nowości i bestsellery</h2>
 			<div className="homepage__products center">
-				{products.map(({ id, ...otherProductProps }) => (
-					<ProductHome key={id} id={id} {...otherProductProps} />
-				))}
+				{products
+					.filter((p, idx) => idx < 15)
+					.map(({ id, ...otherProductProps }) => <ProductHome key={id} id={id} {...otherProductProps} />)}
 			</div>
 		</div>
 	);

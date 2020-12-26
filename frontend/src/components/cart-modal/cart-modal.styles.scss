@@ -6,6 +6,9 @@
 	position: fixed;
 	top: 0;
 	right: 0;
+	z-index: 100;
+	// animation: moveFromRight .4s;
+	transition: all .4s;
 
 	&__container {
 		width: 90%;
@@ -68,5 +71,15 @@
 		.custom-button {
 			margin: 0;
 		}
+	}
+}
+
+@keyframes moveFromRight {
+	0% {
+		right: -320px;
+	}
+
+	100% {
+		right: 0;
 	}
 }

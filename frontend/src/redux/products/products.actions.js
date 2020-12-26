@@ -20,3 +20,23 @@ export const getProducts = () => async (dispatch) => {
 		});
 	}
 };
+
+export const getProduct = (slug) => async (dispatch) => {
+	try {
+		dispatch({
+			type: ProductsTypes.PRODUCT_REQUEST
+		});
+
+		const { data } = await axios.get(`/api/products/${slug}`);
+
+		dispatch({
+			type: ProductsTypes.PRODUCT_SUCCESS,
+			payload: data
+		});
+	} catch (error) {
+		dispatch({
+			type: ProductsTypes.PRODUCT_FAIL,
+			payload: error.resposen && error.response.data.message ? error.response.data.message : error.message
+		});
+	}
+};

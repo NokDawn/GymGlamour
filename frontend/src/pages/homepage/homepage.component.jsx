@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import axios from 'axios';
+import { getProducts } from '../../redux/products/products.actions';
 
 import Slider from '../../components/slider/slider.component';
 import ProductHome from '../../components/product-home/product-home.component';
@@ -8,18 +9,17 @@ import ProductHome from '../../components/product-home/product-home.component';
 import './homepage.styles.scss';
 
 const HomePage = () => {
-	const [ products, setProducts ] = useState([]);
+	const dispatch = useDispatch();
 
-	useEffect(() => {
-		const getProducts = async () => {
-			const { data } = await axios.get('/api/products');
+	useEffect(
+		() => {
+			dispatch(getProducts());
+		},
+		[ dispatch ]
+	);
 
-			console.log(data);
-			setProducts(data);
-		};
-
-		getProducts();
-	}, []);
+	const productsList = useSelector((state) => state.productsList);
+	const { products, loading, error } = productsList;
 
 	return (
 		<div className="homepage">

@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { getProduct, getProducts } from '../../redux/products/products.actions';
 
 import { Link } from 'react-router-dom';
 import { FaBoxOpen } from 'react-icons/fa';
@@ -7,33 +10,21 @@ import CustomButton from '../../components/custom-button/custom-button.component
 import ProductHome from '../../components/product-home/product-home.component';
 
 import './product-page.styles.scss';
-import axios from 'axios';
 
 const ProductPage = ({ match }) => {
+	const dispatch = useDispatch();
 	const [ photoId, setPhotoId ] = useState(0);
-	const [ product, setProduct ] = useState({ imageUrls: [], sizes: [] });
-	console.log(product);
-	const [ products, setProducts ] = useState([]);
 
 	useEffect(
 		() => {
-			const getProduct = async () => {
-				const { data } = await axios.get(`/api/products/${match.params.id}`);
-
-				console.log(data);
-				setProduct(data);
-			};
-
-			const getProducts = async () => {
-				const { data } = await axios.get('/api/products');
-
-				setProducts(data);
-			};
-			getProduct();
-			getProducts();
+			dispatch(getProduct(match.params.id));
+			dispatch(getProducts());
 		},
-		[ match ]
+		[ dispatch, match ]
 	);
+
+	const productList = useSelector((state) => state.productsList);
+	const { products, product, loading, error } = productList;
 
 	return (
 		<div className="product-page">

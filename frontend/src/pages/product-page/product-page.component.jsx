@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 import { FaBoxOpen } from 'react-icons/fa';
@@ -6,14 +6,34 @@ import { FaBoxOpen } from 'react-icons/fa';
 import CustomButton from '../../components/custom-button/custom-button.component';
 import ProductHome from '../../components/product-home/product-home.component';
 
-import products from '../../products';
-
 import './product-page.styles.scss';
+import axios from 'axios';
 
 const ProductPage = ({ match }) => {
 	const [ photoId, setPhotoId ] = useState(0);
+	const [ product, setProduct ] = useState({ imageUrls: [], sizes: [] });
+	console.log(product);
+	const [ products, setProducts ] = useState([]);
 
-	const product = products.find((product) => product.id === Number(match.params.id));
+	useEffect(
+		() => {
+			const getProduct = async () => {
+				const { data } = await axios.get(`/api/products/${match.params.id}`);
+
+				console.log(data.data);
+				setProduct(data.data);
+			};
+
+			const getProducts = async () => {
+				const { data } = await axios.get('/api/products');
+
+				setProducts(data);
+			};
+			getProduct();
+			getProducts();
+		},
+		[ match ]
+	);
 
 	return (
 		<div className="product-page">

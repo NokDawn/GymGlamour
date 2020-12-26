@@ -20,8 +20,8 @@ const ProductPage = ({ match }) => {
 			const getProduct = async () => {
 				const { data } = await axios.get(`/api/products/${match.params.id}`);
 
-				console.log(data.data);
-				setProduct(data.data);
+				console.log(data);
+				setProduct(data);
 			};
 
 			const getProducts = async () => {
@@ -119,8 +119,8 @@ const ProductPage = ({ match }) => {
 					<div className="product-page__collection-products">
 						{products
 							.filter((p, idx) => idx < 4)
-							.map(({ id, ...otherProductProps }) => (
-								<ProductHome key={id} id={id} {...otherProductProps} />
+							.map(({ _id, ...otherProductProps }) => (
+								<ProductHome key={_id} id={_id} {...otherProductProps} />
 							))}
 					</div>
 				</div>

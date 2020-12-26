@@ -28,7 +28,7 @@ const HomePage = () => {
 			<div className="homepage__products center">
 				{products
 					.filter((p, idx) => idx < 15)
-					.map(({ id, ...otherProductProps }) => <ProductHome key={id} id={id} {...otherProductProps} />)}
+					.map(({ _id, ...otherProductProps }) => <ProductHome key={_id} id={_id} {...otherProductProps} />)}
 			</div>
 		</div>
 	);

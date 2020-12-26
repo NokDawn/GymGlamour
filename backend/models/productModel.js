@@ -19,6 +19,10 @@ const productSchema = mongoose.Schema(
 		countInStock: {
 			type: Number,
 			required: [ true, 'Quantity of the Product is required!' ]
+		},
+		slug: {
+			type: String,
+			unique: true
 		}
 	},
 	{

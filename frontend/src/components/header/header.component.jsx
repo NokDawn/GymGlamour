@@ -1,5 +1,6 @@
 import Logo from '../logo/logo.component';
 import CustomButton from '../custom-button/custom-button.component';
+import CartModal from '../cart-modal/cart-modal.component';
 
 import { FaShoppingBasket, FaSearch } from 'react-icons/fa';
 
@@ -21,6 +22,7 @@ const Header = () => {
 					</div>
 				</div>
 			</div>
+			<CartModal />
 		</header>
 	);
 };

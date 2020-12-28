@@ -29,6 +29,7 @@
 		}
 
 		&-close {
+			cursor: pointer;
 			font-size: 2.3rem;
 			font-weight: 300;
 		}
@@ -38,6 +39,11 @@
 		padding-bottom: .7rem;
 		border-bottom: 1px solid rgb(224, 220, 220);
 		margin-bottom: 2rem;
+
+		&-message {
+			text-align: center;
+			font-size: 2rem;
+		}
 	}
 
 	&__total {
@@ -64,6 +70,7 @@
 		justify-content: space-between;
 
 		&-continue {
+			cursor: pointer;
 			text-decoration: underline;
 			font-size: 1.3rem;
 		}

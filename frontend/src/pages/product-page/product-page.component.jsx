@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getProduct, getProducts } from '../../redux/products/products.actions';
+import { addToCart } from '../../redux/cart/cart.actions';
+import { showCart } from '../../redux/cart/cart.actions';
 
 import { Link } from 'react-router-dom';
 import { FaBoxOpen } from 'react-icons/fa';
@@ -14,6 +16,7 @@ import './product-page.styles.scss';
 const ProductPage = ({ match }) => {
 	const dispatch = useDispatch();
 	const [ photoId, setPhotoId ] = useState(0);
+	const [ size, setSize ] = useState('XS');
 
 	useEffect(
 		() => {
@@ -25,6 +28,25 @@ const ProductPage = ({ match }) => {
 
 	const productList = useSelector((state) => state.productsList);
 	const { products, product, loading, error } = productList;
+
+	const cart = useSelector((state) => state.cart);
+	const { cartHidden } = cart;
+
+	const productToCart = {
+		id: product._id,
+		image: product.imageUrls[0],
+		name: product.name,
+		price: product.price,
+		countInStock: product.countInStock,
+		size,
+		qty: product.qty ? product.qty : 1
+	};
+
+	const openCart = () => {
+		if (cartHidden === true) {
+			dispatch(showCart());
+		}
+	};
 
 	return (
 		<div className="product-page">
@@ -73,10 +95,27 @@ const ProductPage = ({ match }) => {
 						<span className="product-page__price">{product.price} zł</span>
 						<span className="product-page__size">Rozmiar</span>
 						<div className="product-page__sizes">
-							<select name="sizes">
-								{product.sizes.map((size) => <option value={size}>{size}</option>)}
+							<select
+								name="sizes"
+								onClick={(e) => {
+									setSize(e.target.value);
+								}}
+							>
+								{product.sizes.map((size, idx) => (
+									<option value={size} key={idx}>
+										{size}
+									</option>
+								))}
 							</select>
-							<CustomButton green>Do koszyka &#8594;</CustomButton>
+							<CustomButton
+								green
+								onClick={() => {
+									dispatch(addToCart(productToCart));
+									dispatch(openCart);
+								}}
+							>
+								Do koszyka &#8594;
+							</CustomButton>
 						</div>
 						<div className="product-page__delivery">
 							<FaBoxOpen className="product-page__delivery-icon" />

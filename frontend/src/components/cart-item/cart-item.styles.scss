@@ -1,0 +1,49 @@
+.cart-item {
+	display: flex;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid rgb(226, 220, 220);
+
+	&__product {
+		margin-left: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+
+		&-name {
+			font-size: 1.4rem;
+			margin-bottom: .7rem;
+		}
+
+		&-size {
+			color: rgb(138, 130, 130);
+			font-size: 1.1rem;
+			margin-bottom: 1rem;
+		}
+
+		&-qty {
+			width: 50px;
+			border: 1px solid rgb(230, 221, 221);
+			padding: .8rem;
+		}
+	}
+
+	&__info {
+		justify-self: flex-end;
+		display: flex;
+		flex-direction: column;
+		text-align: right;
+
+		&-delete {
+			cursor: pointer;
+			margin-bottom: auto;
+			font-size: 1.4rem;
+			color: black;
+		}
+
+		&-price {
+			font-size: 1.3rem;
+			font-weight: 700;
+		}
+	}
+}

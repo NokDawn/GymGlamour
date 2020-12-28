@@ -1,8 +1,8 @@
 import './custom-button.styles.scss';
 
-const CustomButton = ({ children, green, ...otherButtonProps }) => {
+const CustomButton = ({ children, green, blue, ...otherButtonProps }) => {
 	return (
-		<button className={`${green ? 'green' : ''} custom-button`} {...otherButtonProps}>
+		<button className={`${green ? 'green' : ''} ${blue ? 'blue' : ''} custom-button`} {...otherButtonProps}>
 			{children}
 		</button>
 	);

@@ -1,0 +1,23 @@
+.search-product {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+	padding-bottom: .5rem;
+	border-bottom: 1px solid rgb(236, 230, 230);
+
+	img {
+		margin-right: 2rem;
+	}
+
+	&__name {
+		font-size: 1.3rem;
+		font-weight: 700;
+		margin-right: auto;
+	}
+
+	&__price {
+		font-size: 1.3rem;
+		font-weight: 700;
+	}
+}

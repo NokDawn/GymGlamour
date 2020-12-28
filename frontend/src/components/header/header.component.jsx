@@ -1,9 +1,11 @@
 import Logo from '../logo/logo.component';
 import CustomButton from '../custom-button/custom-button.component';
 import CartModal from '../cart-modal/cart-modal.component';
+import SearchForm from '../search-form/search-form.component';
 
 import { withRouter } from 'react-router-dom';
 
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { showCart } from '../../redux/cart/cart.actions';
 
@@ -13,6 +15,8 @@ import './header.styles.scss';
 
 const Header = ({ history }) => {
 	const dispatch = useDispatch();
+
+	const [ showSearch, setShowSearch ] = useState(false);
 
 	const cartHandler = () => {
 		dispatch(showCart());
@@ -28,7 +32,7 @@ const Header = ({ history }) => {
 				<div className="header__nav">
 					<CustomButton onClick={() => history.push('/konto/logowanie')}>Zaloguj się</CustomButton>
 					<div className="header__icons">
-						<FaSearch className="search" />
+						<FaSearch className="search" onClick={() => setShowSearch(true)} />
 						<div className="header__icons-basket" onClick={cartHandler}>
 							<FaShoppingBasket />
 							<span className="header__icons-count">
@@ -39,6 +43,7 @@ const Header = ({ history }) => {
 				</div>
 			</div>
 			<CartModal />
+			<SearchForm closeSearch={setShowSearch} showSearch={showSearch} />
 		</header>
 	);
 };

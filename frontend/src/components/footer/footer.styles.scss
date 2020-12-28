@@ -50,3 +50,21 @@
 		}
 	}
 }
+
+@media (max-width: 1200px) {
+	.footer {
+		&__container {
+			justify-content: space-around;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.footer {
+		&__col {
+			&-3 {
+				flex-basis: 25%;
+			}
+		}
+	}
+}

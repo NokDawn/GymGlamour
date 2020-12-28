@@ -6,6 +6,102 @@
 			justify-content: center;
 			background-size: cover;
 			height: 750px;
+			// width: 100%;
+			// background-size: contain;
+			// background-repeat: no-repeat;
+			// background-position: center;
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+	.slider {
+		&__each {
+			div {
+				height: 600px;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.slider {
+		&__each {
+			div {
+				height: 450px;
+			}
+		}
+	}
+}
+
+@media (max-width: 830px) {
+	.slider {
+		&__each {
+			div {
+				height: 370px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.slider {
+		&__each {
+			div {
+				height: 340px;
+			}
+		}
+	}
+}
+
+@media (max-width: 688px) {
+	.slider {
+		&__each {
+			div {
+				height: 310px;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+	.slider {
+		&__each {
+			div {
+				height: 270px;
+			}
+		}
+	}
+}
+
+@media (max-width: 540px) {
+	.slider {
+		&__each {
+			div {
+				height: 230px;
+			}
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.slider {
+		&__each {
+			div {
+				height: 170px;
+			}
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.slider {
+		&__each {
+			div {
+				height: 160px;
+			}
 		}
 	}
 }

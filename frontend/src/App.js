@@ -9,6 +9,7 @@ import Footer from './components/footer/footer.component';
 import HomePage from './pages/homepage/homepage.component';
 import ProductPage from './pages/product-page/product-page.component';
 import LoginPage from './pages/login-page/login-page.component';
+import SizesPage from './pages/sizes-page/sizes-page.component';
 
 import './App.css';
 
@@ -31,6 +32,7 @@ function App() {
 				<Route exact path="/" component={HomePage} />
 				<Route exact path="/kategoria/:category/:id" component={ProductPage} />
 				<Route exact path="/konto/logowanie" component={LoginPage} />
+				<Route exact path="/strona/tabele-rozmiarow" component={SizesPage} />
 			</Switch>
 			<Footer />
 		</div>
